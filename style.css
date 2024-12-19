@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  height: 100px;
+}
+header div .logo{
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  margin-left: 80px;
+  transition: 0.5s;
+  font-weight: 300;
+}
+nav {
+  margin-right: 150px;
+}
+.menu >li .first-child{
+  color: #4285f4;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu > li {
+  position: relative;
+}
+.menu > li > a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.5s;
+}
+
+.menu > li > a:hover {
+  color: #4285f4;
+}
+
+/* Второй уровень */
+.dropdown {
+  z-index: 1;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: none;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.dropdown li {
+  position: relative;
+}
+.dropdown li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+.dropdown li .last-child{
+  border-top:1px solid #4285f4;
+  color: #4285f4;
+}
+.submenu li .first{
+  border-top:1px solid #4285f4;
+  color: #4285f4;
+}
+
+.dropdown li a:hover {
+  background-color: #f4f4f4;
+}
+
+/* Третий уровень */
+.submenu {
+  z-index: 1;
+  position: absolute;
+  top: 0; /* На уровне "More Links" */
+  left: 100%; /* Открывается справа */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: none;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #f4f4f4;
+}
+
+/* Показать меню при наведении */
+.menu li:hover > .dropdown {
+  display: block;
+}
+
+.dropdown li:hover > .submenu {
+  display: block;
+}
+section{
+  position: relative;
+  width: 100%;
+  height: min-content;
+  transition: 1s ease;
+}
+section img{
+  position: relative;
+  left: 45%;
+  top: -120px;
+  z-index: -1;
+}
+section .make{
+  position: absolute;
+  width: 540px;
+  height: 134px;
+  top: 10%;
+  left: 10%;
+}
+section .make h1{
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+section .make p{
+  font-size: 1em;
+  color: #5c5b5b;
+  margin-bottom: 20px;
+}
+section .make div a {
+  position: relative;
+  font-size: 16px;
+  background: #4285f4;
+  color: white;
+  padding: 10px 23px;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 20px;
+  top: 30px;
+}
+section .make div:hover{
+  transform: translateY(-10px);
+  transition:  1s ease;
+}
+.Features{
+  position: relative;
+  width: 100%;
+}
+.Features .wraper{
+  position: absolute;
+  width: max-content;
+  height: 50px;
+  top: -260px;
+  left: 24%;
+  text-align: center;
+  animation: move 1s ease-in-out;
+}
+.Features  .wraper h1{
+  position: relative;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.Features .wraper p{
+  position: relative;
+  color: #5c5b5b;
+}
+@keyframes move {
+  from{
+    opacity: 0;
+    scale: 0.5;
+    top: -220px;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+    top: -260px;
+  }
+}
+.main{
+  position: relative;
+  display: flex;
+  gap: 30px;
+  margin-right: 35px;
+}
+.main .block1{
+  position: relative;
+  top: -40px;
+  width: 500px;
+  height: 270px;
+  margin-left: 35px ;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  animation: top 1s ease-in-out;
+  background: #e4e3e3;
+} 
+.main .block1:hover{
+  transform: translateY(-43px);
+}
+
+.main .block1 .circle1{
+  position: relative;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  left: 35%;
+  top: -70px;
+  background: #4285f4;
+}
+
+
+.main .block1 .circle1 i{
+  position: relative;
+  font-weight: 400;
+  font-size: 45px;
+  top: 22%;
+  color: white;
+}
+.main .block1 h1{
+  position: relative;
+  font-weight: 300;
+  font-size: 20px;
+  top: -50px;
+}
+.main .block1 p{
+  position: relative;
+  color: #333;
+  font-weight: 400;
+  top: -40px;
+}
+.main .block1 a{
+  position: relative;
+  text-decoration: none;
+  color: #4285f4;
+  top: -20px;
+}
+@keyframes top {
+  from{
+    opacity: 0;
+    top: -50px;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+    top: -40px;
+  }
+}
+.main2{
+  position: relative;
+  display: flex;
+  gap: 30px;
+  margin-right: 35px;
+}
+.main2 .block2{
+  position: relative;
+  top: 50px;
+  width: 500px;
+  height: 270px;
+  margin-left: 35px ;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  animation: top 1s ease-in-out;
+  background: #e4e3e3;
+}
+.main2 .block2 .circle2{
+  position: relative;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  left: 35%;
+  top: -70px;
+  background: #4285f4;
+}
+.main2 .block2 .circle2 i{
+  position: relative;
+  font-weight: 400;
+  font-size: 45px;
+  top: 22%;
+  color: white;
+}
+.main2 .block2 h1{
+  position: relative;
+  font-weight: 300;
+  font-size: 20px;
+  top: -50px;
+}
+.main2 .block2 p{
+  position: relative;
+  color: #333;
+  font-weight: 400;
+  top: -40px;
+}
+.main2 .block2 a{
+  position: relative;
+  text-decoration: none;
+  color: #4285f4;
+  top: -20px;
+}
+.main2 .block2:hover{
+  transform: translateY(-43px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
